@@ -2,49 +2,60 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <style>
-            body {
-                padding-top: 60px;
-                padding-bottom: 40px;
-                background-image: url("FinaLines.png");
-                background-color: #000000;
-                background-position: center;
-                background-repeat: repeat;
-                background-size: contain;
-                color: #0094ff
-            }
+        body {
 
-            .container {
-                width: 80%;
-                margin: 0 auto;
-            }
+            width: 30%;
+            padding-top: 60px;
+            padding-bottom: 40px;
+            background-image: url("scene.jpg");
+            background-color: #1e1e1e;
+            background-position: center;
+            background-position-y: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: #0094ff
+        }
 
-            .fixed-header, .fixed-footer {
-                width: 100%;
-                position: fixed;
-                background: #333;
-                padding: 10px 0;
-                color: #fff;
-            }
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
 
-            .fixed-header {
-                top: 0;
-            }
+        .fixed-header, .fixed-footer {
+            width: 100%;
+            position: fixed;
+            background: #0094ff;
+            padding: 10px 0;
+            color: #fff;
+        }
 
-            .fixed-footer {
-                bottom: 0;
-            }
+        .fixed-header {
+            top: 0;
+            outline: 2px solid #000000;
+        }
 
-            nav a {
-                color: #fff;
-                text-decoration: none;
-                padding: 7px 25px;
-                display: inline-block;
-            }
+        .fixed-footer {
+            bottom: 0;
+            outline: 2px solid #000000;
+        }
 
-            .container p {
-                line-height: 200px; /* Create scrollbar to test positioning */
-            }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 7px 25px;
+            display: inline-block;
+        }
+
+        .container p {
+            line-height: 20px; /* Create scrollbar to test positioning */
+        }
+
+        .title p{
+            width: 90%;
+        } /* Figure out how to edit text container */
+
     </style>
 </head>
 
@@ -61,9 +72,13 @@
         </div>
     </div>
 
-    <h1>Hello World</h1>
-    <p>I'm hosted directly from heck!</p>
     
+    <div class="title">
+        <h1>Hello World</h1>
+        <p>I'm hosted directly from heck!</p>
+    </div>
+    
+
     <!--
     <img src="yur.png" alt="yuro">
     <img src="bobby.GIF" alt="nobo">
@@ -76,7 +91,7 @@
     </div>
 
     <div class="fixed-footer">
-        <div class="container">Copyright but not yet &copy; 2021 BrunoandHunter, LLC, my sister Nicole is bald</div>
+        <div class="container">Copyright but not yet &copy; 2021 BrunoandHunter, not yet LLC, my sister Nicole is bald</div>
     </div>
 
 </body>
