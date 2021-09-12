@@ -9,11 +9,11 @@
     <style>
         body {
             width: 90%;
-            padding-top: 60px;
+            padding-top: 30px;
             padding-bottom: 40px;
             padding-right: 40px;
             background-color: navy;
-            color: #0094ff;
+            color: #0094ff
         }
 
         .container {
@@ -27,12 +27,18 @@
             background: #1e1e1e;
             padding: 10px 10px;
             color: #fff;
+            margin: 0 0 0 0;
         }
 
         .fixed-header {
             top: 0;
+            /*left: 0; gets rid of left gap*/
             outline: 2px solid #000000;
         }
+
+            .fixed-header ul {
+                margin: 0;
+            }
 
         .fixed-footer {
             bottom: 0px;
@@ -46,6 +52,13 @@
             display: inline-block;
         }
 
+        .nav a:hover {
+            color: #000000;
+            padding: 0px 25px;
+            display: inline-block;
+            background-color: #ddd;
+        }
+
         .container p {
             line-height: 20px; /* Create scrollbar to test positioning */
             padding-left: 30px;
@@ -53,8 +66,34 @@
 
         .title p {
             width: 100%;
+            font-size: 22px;
+            color: blueviolet;
+            line-height: 0px;
+            padding: 10px;
+        }
+
+        .title p2 {
+            width: 100%;
+            font-size: 18px;
+            color: blueviolet;
+            line-height: 0px;
+            padding-left: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .title h1 {
+            width: 100%;
             font-size: 30px;
             color: blueviolet;
+            line-height: 0px;
+            padding: 10px;
+        }
+
+        #Homeimage {
+            height: 30px;
+            width: 30px;
+            padding: 5px 0px;
+            display: inline-block;
         }
     </style>
 </head>
@@ -64,6 +103,7 @@
         <div class="container">
             <nav>
                 <ul>
+                    <!--<a href="index"> <img src="logo.png" ; id="Homeimage"></a>-->
                     <a href="index">Home</a>
                     <a href="about">About</a>
                     <a href="UW1020">UW1020</a>
