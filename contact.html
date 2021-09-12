@@ -21,40 +21,47 @@
             margin: 0 0 0 0;
         }
 
-        .fixed-header, .fixed-footer {
-            width: 100%;
+        .fixed-header {
+            top: 0;
+            left: 0;
+            right: 0;
+            outline: 2px solid #000000;
+            width: contain;
             position: fixed;
             background: #1e1e1e;
-            padding: 10px 10px;
+            padding: 10px 0px;
             color: #fff;
             margin: 0 0 0 0;
         }
 
-        .fixed-header {
-            top: 0;
-            /*left: 0; gets rid of left gap*/
-            outline: 2px solid #000000;
+        .fixed-header ul {
+            margin: 0;
         }
 
-            .fixed-header ul {
-                margin: 0;
-            }
-
-        .fixed-footer {
+        .footer {
             bottom: 0px;
             outline: 2px solid #000000;
+            width: contain;
+            position: absolute;
+            left: 0;
+            right: 0;
+            background: #1e1e1e;
+            padding: 10px 10px 10px 10px;
+            color: #fff;
+            margin: 0 0 0 0;
         }
 
         nav a {
             color: #fff;
             text-decoration: none;
-            padding: 0px 25px;
+            padding: 0px 25px 0px 25px;
             display: inline-block;
+            left: 0;
         }
 
-        .nav a:hover {
+        nav a:hover {
             color: #000000;
-            padding: 0px 25px;
+            padding: 0px 25px 0px 25px;
             display: inline-block;
             background-color: #ddd;
         }
@@ -92,8 +99,13 @@
         #Homeimage {
             height: 30px;
             width: 30px;
-            padding: 5px 0px;
+            padding-top: 3.5px;
+            padding-left: 40px;
             display: inline-block;
+            position: fixed;
+            margin: 0 0 0 0;
+            left: 0;
+            top: 0;
         }
     </style>
 </head>
@@ -104,7 +116,7 @@
         <div class="container">
             <nav>
                 <ul>
-                    <!--<a href="index"> <img src="logo.png" ; id="Homeimage"></a>-->
+                    <a href="index"> <img src="logo.png" ; id="Homeimage"></a>
                     <a href="index">Home</a>
                     <a href="about">About</a>
                     <a href="UW1020">UW1020</a>
@@ -125,7 +137,7 @@
     <p>No Latin here! Sorry about that...</p>
 </div>
 
-<div class="fixed-footer">
+<div class="footer">
     <div class="container">Copyright but not yet &copy; 2021 BrunoandHunter, not yet LLC</div>
 </div>
 
