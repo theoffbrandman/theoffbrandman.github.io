@@ -9,7 +9,7 @@
     <style>
         body {
             width: 90%;
-            padding-top: 60px;
+            padding-top: 30px;
             padding-bottom: 40px;
             padding-right: 40px;
             background-color: navy;
@@ -27,11 +27,17 @@
             background: #1e1e1e;
             padding: 10px 10px;
             color: #fff;
+            margin: 0 0 0 0;
         }
 
         .fixed-header {
             top: 0;
+            /*left: 0; gets rid of left gap*/
             outline: 2px solid #000000;
+        }
+
+        .fixed-header ul{
+            margin: 0;
         }
 
         .fixed-footer {
@@ -48,6 +54,7 @@
 
         .container p {
             line-height: 20px; /* Create scrollbar to test positioning */
+            padding-left: 30px;
         }
 
         .title p {
