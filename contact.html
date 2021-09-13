@@ -7,13 +7,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <style>
-        body {
-            width: 90%;
-            padding-top: 30px;
-            padding-bottom: 40px;
-            padding-right: 40px;
+        html, body {
+            width: 99%;
+            height: 100%;
+            margin: 0 0 0 0;
+            padding-top: 15px;
+            padding-bottom: 0px;
+            padding-right: 0px;
             background-color: navy;
             color: #0094ff
+        }
+
+        .wrapper {
+            min-height: auto;
+            margin: 0px; /* the bottom margin is the negative value of the footer's height */
         }
 
         .container {
@@ -34,21 +41,25 @@
             margin: 0 0 0 0;
         }
 
-        .fixed-header ul {
-            margin: 0;
-        }
+            .fixed-header ul {
+                margin: 0;
+            }
 
         .footer {
-            bottom: 0px;
             outline: 2px solid #000000;
             width: contain;
             position: absolute;
             left: 0;
             right: 0;
+            bottom: 1;
             background: #1e1e1e;
             padding: 10px 10px 10px 10px;
             color: #fff;
             margin: 0 0 0 0;
+        }
+
+        .footer, .push {
+            height: 20px;
         }
 
         nav a {
@@ -59,16 +70,17 @@
             left: 0;
         }
 
-        nav a:hover {
-            color: #000000;
-            padding: 0px 25px 0px 25px;
-            display: inline-block;
-            background-color: #ddd;
-        }
+            nav a:hover {
+                color: #000000;
+                padding: 0px 25px 0px 25px;
+                display: inline-block;
+                background-color: #ddd;
+            }
 
-        .container p {
+        .wrapper p {
             line-height: 20px; /* Create scrollbar to test positioning */
             padding-left: 30px;
+            text-indent: 30px;
         }
 
         .title p {
@@ -133,7 +145,7 @@
     <p>Under construction! Come back later</p>
 </div>
 
-<div class="container">
+<div class="wrapper">
     <p>No Latin here! Sorry about that...</p>
 </div>
 
