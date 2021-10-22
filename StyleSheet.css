@@ -5,9 +5,23 @@
     padding: 0;
 }
 
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    padding-top: 45px;
+    background-color: #1e1e1e;
+    color: #0094ff
+}
+
+.container {
+    flex: 1 0 auto;
+}
+
 ul {
     list-style: none;
-    padding-left: 0;
+    margin: 0;
+    padding: 0;
 }
 
 footer {
@@ -32,20 +46,6 @@ a:hover {
     font-size: 1.375rem;
     padding-bottom: 0.625rem;
 }
-
-body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-    padding-top: 45px;
-    background-color: #1e1e1e;
-    color: #0094ff
-}
-
-.container {
-    flex: 1 0 auto;
-}
-
 
 .ft-main {
     padding: 1.25rem 1.875rem;
@@ -166,6 +166,16 @@ nav a {
         background-color: #ddd;
     }
 
+navsub a {
+    color: #0094ff;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+    navsub a:hover {
+        color: #0094ff;
+    }
+
 .wrapper p {
     width: 95%;
     line-height: 35px; /* Create scrollbar to test positioning */
@@ -173,7 +183,8 @@ nav a {
     padding-bottom: 15px;
     text-indent: 30px;
     flex: 1; /* same as flex-grow: 1; */
-    /*font-family: 'Times New Roman', Times, serif;*/
+    font-family: 'Times New Roman', Times, serif;
+    color: #0094ff;
 }
 
 .title p {
@@ -190,18 +201,25 @@ nav a {
     font-size: 30px;
     font-family: 'Times New Roman', Times, serif;
     color: blueviolet;
-    line-height: 20px;
-    padding: 10px;
+    line-height: 40px;
+    padding-left: 30px;
+    text-align: left;
 }
 
 .title h2 {
+    padding-left: 30px;
+    text-align: left;
     width: 100%;
-    text-align: center;
     font-size: 18px;
     color: blueviolet;
     line-height: 20px;
     padding-bottom: 10px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.card h2 {
+    margin-bottom: 10px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .logo {
@@ -213,4 +231,97 @@ nav a {
     padding-left:20px;
     display: inline-block;
     position: fixed;
+}
+
+/* Float four columns side by side */
+.column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {
+    margin: 0 -5px;
+}
+
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+/* Style the counter cards */
+.card {
+    box-shadow: 2px 4px 8px 2px rgba(138, 43, 226, 0.8); /* this adds the "card" effect */
+    text-align: left;
+    background-color: #1e1e1e;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+    float: left;
+    width: 75%;
+    padding-left: 20px;
+  }
+  
+  /* Right column */
+  .rightcolumn {
+    float: left;
+    width: 25%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  /* Fake image */
+  .fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+  }
+
+ul li:hover ul {
+    display: block;
+}
+
+ul li ul {
+    position: absolute;
+    width: 200px;
+    display: none;
+}
+
+ul li ul li {
+    background: #1e1e1e;
+    display: block;
+    float: left;
+    clear: left;
+}
+
+ul li ul li a {
+    display: block !important;
+}
+
+ul li ul li:hover {
+    background: #666;
 }
