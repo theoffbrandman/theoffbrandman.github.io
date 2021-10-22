@@ -1,17 +1,20 @@
 ﻿* {
     box-sizing: border-box;
-    font-family: ’Lato’, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
+    max-width: 100%;
 }
 
-body {
+body, html {
+    width: 100vw;
+    height: 100vh;
+    box-sizing: inherit;
+    padding-top: 25px;
     display: flex;
-    min-height: 100vh;
     flex-direction: column;
-    padding-top: 45px;
     background-color: #1e1e1e;
-    color: #0094ff
+    color: #0094ff;
 }
 
 .container {
@@ -138,7 +141,7 @@ input[type="submit"] {
     background: #1e1e1e;
     padding: 10px 0px;
     color: #fff;
-    margin: 0 0 0 0;
+    
 }
 
     .fixed-header ul {
@@ -258,7 +261,7 @@ navsub a {
     text-align: left;
     background-color: #1e1e1e;
     padding: 20px;
-    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 /* Responsive columns - one column layout (vertical) on small screens */
