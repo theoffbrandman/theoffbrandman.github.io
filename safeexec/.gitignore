@@ -1,5 +1,0 @@
-# don't track old emacs files, objects, or executables
-*~
-*.o
-safeexec
-os-detect
