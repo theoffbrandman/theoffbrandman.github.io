@@ -1,8 +1,8 @@
 {
   "remark1": "edit the 2 paths below to run anything",
 
-  "safeexec-executable-abspath": "theoffbrandman.github.io/javis",
-  "java_jail-abspath": "theoffbrandman.github.io/javis2",
+  "safeexec-executable-abspath": "safeexec",
+  "java_jail-abspath": "java_jail",
 
   "remark2": [
     "optinally, edit these to log the submissions",
