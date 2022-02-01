@@ -10,16 +10,123 @@ body, html {
     width: 100vw;
     height: 100vh;
     box-sizing: inherit;
-    padding-top: 25px;
+    padding-top: 40px;
     display: flex;
     flex-direction: column;
-    background-color: #1e1e1e;
-    color: #0094ff;
+    background-color: #001824;
+    color: #000000;
 }
 
 .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.wrapper{
     flex: 1 0 auto;
 }
+
+.wrapper p {
+    width: 100%;
+    line-height: 25px;
+    padding-left: 10px;
+    padding-bottom: 15px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: #c8cdd2;
+}
+
+.wrapper h1 {
+    width: 100%;
+    line-height: 25px;
+    padding-left: 10px;
+    padding-bottom: 15px;
+    text-align: center;
+    /*text-indent: 30px;*/
+    flex: 1; /* same as flex-grow: 1; */
+    font-family: 'Times New Roman', Times, serif;
+    color: #c8cdd2;
+}
+
+.wrapper h2 { 
+    width: 100%;
+    line-height: 25px;
+    padding-left: 10px;
+    padding-bottom: 15px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    color: #c8cdd2;
+ }
+
+.image { 
+    position: relative;
+    width: 100%; /* for IE 6 */
+    color: #001824;
+    padding-bottom: 30px;
+ }
+
+ .image h1 { 
+    position: absolute;
+    top: 150px;
+    width: 100%;
+    line-height: 30px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: #001824;
+ }
+
+ .image p { 
+    position: absolute;
+    top: 190px;
+    width: 100%;
+    line-height: 30px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: #001824;
+ }
+
+.fixed-header {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px 15px 20px 25px;
+    top: 0;
+    left: 0;
+    right: 0; /*Allows fixed header to strecth all the way to the right*/
+    width: contain;
+    position: fixed;
+    background: #1e1e1e;
+    color: #fff;
+    
+}
+
+    .fixed-header ul {
+        margin: 0px;
+    }
+
+    .fixed-header li{
+        direction: ltr;
+        display: inline-block;
+    }
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 0px 25px 0px 25px;
+    display: inline-block;
+    left: 0;
+}
+
+    nav a:hover {
+        color: #000000;
+        padding: 0px 25px 0px 25px;
+        display: inline-block;
+        background-color: #ddd;
+    }
 
 ul {
     list-style: none;
@@ -27,7 +134,152 @@ ul {
     padding: 0;
 }
 
+ul li{
+    width:inherit;
+}
+
+ul li:hover ul {
+    display: block;
+}
+
+ul li ul {
+    position: absolute;
+    width: 200px;
+    display: none;
+    width:inherit;/*trying to make dropdown same width as top part*/
+}
+
+ul li ul li {
+    background: #000000;
+    display: block;
+    float: left;
+    clear: left;
+    width:inherit;
+}
+
+ul li ul li a {
+    display: block !important;
+    width:inherit;
+}
+
+ul li ul li:hover {
+    background: #666;
+}
+
+.logo {
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: auto;
+    padding-top: 5.5px;
+    padding-left:20px;
+    display: inline-block;
+    position: fixed;
+}
+
+/* Style the counter cards */
+.cardsmall {
+    text-align: center;
+    background-color: #efffff;
+    width: 350px
+}
+
+.cardlarge {
+    text-align: center;
+    background-color: #efffff;
+    width: 450px;
+}
+
+.cardwide {
+    text-align: center;
+    background-color: #efffff;
+    width: 95%;
+}
+
+.cardtiny {
+    text-align: center;
+    background-color: #efffff;
+    width: 200px;
+}
+
+.cardlarge p {
+    width: 100%;
+    line-height: 25px;
+    padding-left: 10px;
+    padding-bottom: 15px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: #001824;
+}
+
+.cardlarge h1 {
+    width: 100%;
+    line-height: 25px;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: #001824;
+}
+
+.cardsmall p {
+    width: 100%;
+    line-height: 25px;
+    padding-left: 10px;
+    padding-bottom: 15px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: #001824;
+}
+
+.cardsmall h1 {
+    width: 100%;
+    line-height: 25px;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: #001824;
+}
+
+.cardwide p {
+    width: 100%;
+    line-height: 25px;
+    padding-left: 10px;
+    padding-bottom: 15px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: #001824;
+}
+
+.cardwide h1 {
+    width: 100%;
+    line-height: 25px;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: #001824;
+}
+
+.cardtiny p {
+    width: 100%;
+    line-height: 25px;
+    padding-left: 10px;
+    padding-bottom: 15px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: #001824;
+}
+
+.cardtiny h1 {
+    width: 100%;
+    line-height: 25px;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: #001824;
+}
+
 footer {
+    bottom: 0;
     padding-top: 25px;
     color: #bbb;
     line-height: 1.5;
@@ -86,7 +338,7 @@ input[type="email"] {
 }
 
 input[type="submit"] {
-    background-color: navy;
+    background-color: #001824;
     color: #fff;
     cursor: pointer;
     border: 0;
@@ -130,201 +382,3 @@ input[type="submit"] {
         .ft-legal-list li:nth-last-child(2) {
             flex: 1; /* same as flex-grow: 1; */
         }
-
-.fixed-header {
-    top: 0;
-    left: 0;
-    /*right: 0; /*Allows fixed header to strecth all the way to the right*/
-    outline: 2px solid #000000;
-    width: contain;
-    position: fixed;
-    background: #1e1e1e;
-    padding: 10px 0px;
-    color: #fff;
-    
-}
-
-    .fixed-header ul {
-        margin: 0;
-    }
-
-    .fixed-header li{
-        direction: ltr;
-        display: inline-block;
-    }
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    font-family: 'Times New Roman', Times, serif;
-    padding: 0px 25px 0px 25px;
-    display: inline-block;
-    left: 0;
-}
-
-    nav a:hover {
-        color: #000000;
-        padding: 0px 25px 0px 25px;
-        display: inline-block;
-        background-color: #ddd;
-    }
-
-navsub a {
-    color: #0094ff;
-    text-decoration: none;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-    navsub a:hover {
-        color: #0094ff;
-    }
-
-.wrapper p {
-    width: 95%;
-    line-height: 35px; /* Create scrollbar to test positioning */
-    padding-left: 30px;
-    padding-bottom: 15px;
-    text-indent: 30px;
-    flex: 1; /* same as flex-grow: 1; */
-    font-family: 'Times New Roman', Times, serif;
-    color: #0094ff;
-}
-
-.title p {
-    width: 100%;
-    font-size: 22px;
-    font-family: 'Times New Roman', Times, serif;
-    color: blueviolet;
-    line-height: 30px;
-    padding: 10px 0px 10px 10px;
-}
-
-.title h1 {
-    width: 100%;
-    font-size: 30px;
-    font-family: 'Times New Roman', Times, serif;
-    color: blueviolet;
-    line-height: 40px;
-    padding-left: 30px;
-    text-align: left;
-}
-
-.title h2 {
-    padding-left: 30px;
-    text-align: left;
-    width: 100%;
-    font-size: 18px;
-    color: blueviolet;
-    line-height: 20px;
-    padding-bottom: 10px;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-.card h2 {
-    margin-bottom: 10px;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-.logo {
-    top: 0;
-    left: 0;
-    width: 50px;
-    height: auto;
-    padding-top: 3.5px;
-    padding-left:20px;
-    display: inline-block;
-    position: fixed;
-}
-
-/* Float four columns side by side */
-.column {
-    float: left;
-    width: 25%;
-    padding: 0 10px;
-}
-
-/* Remove extra left and right margins, due to padding in columns */
-.row {
-    margin: 0 -5px;
-}
-
-    /* Clear floats after the columns */
-    .row:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-
-/* Style the counter cards */
-.card {
-    box-shadow: 2px 4px 8px 2px rgba(138, 43, 226, 0.8); /* this adds the "card" effect */
-    text-align: left;
-    background-color: #1e1e1e;
-    padding: 20px;
-    margin-bottom: 40px;
-}
-
-/* Responsive columns - one column layout (vertical) on small screens */
-@media screen and (max-width: 600px) {
-    .column {
-        width: 100%;
-        display: block;
-        margin-bottom: 20px;
-    }
-}
-
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
-    .leftcolumn, .rightcolumn {   
-      width: 100%;
-      padding: 0;
-    }
-  }
-
-/* Create two unequal columns that floats next to each other */
-/* Left column */
-.leftcolumn {   
-    float: left;
-    width: 75%;
-    padding-left: 20px;
-  }
-  
-  /* Right column */
-  .rightcolumn {
-    float: left;
-    width: 25%;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  
-  /* Fake image */
-  .fakeimg {
-    background-color: #aaa;
-    width: 100%;
-    padding: 20px;
-  }
-
-ul li:hover ul {
-    display: block;
-}
-
-ul li ul {
-    position: absolute;
-    width: 200px;
-    display: none;
-}
-
-ul li ul li {
-    background: #1e1e1e;
-    display: block;
-    float: left;
-    clear: left;
-}
-
-ul li ul li a {
-    display: block !important;
-}
-
-ul li ul li:hover {
-    background: #666;
-}
